@@ -151,8 +151,8 @@ Transform:
   m_GameObject: {fileID: 27365530}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -0.229, y: 0.16900003, z: -0.005}
-  m_LocalScale: {x: 0.023, y: 1, z: 0.023}
+  m_LocalPosition: {x: -21, y: 17, z: -1}
+  m_LocalScale: {x: 1.9, y: 1, z: 1.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1818539861}
@@ -607,7 +607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: dc4beca251344424e8dc39308aef6372, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -778,7 +778,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -287, y: 144.6, z: 29}
+  m_LocalPosition: {x: -3, y: 173, z: 83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -870,7 +870,7 @@ Transform:
   m_GameObject: {fileID: 868337270}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.045, y: 109.5, z: -302}
+  m_LocalPosition: {x: 0.045, y: 109.5, z: -255.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1101,8 +1101,8 @@ Transform:
   m_GameObject: {fileID: 1162645454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.70710677, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: 5.74, y: 5.13, z: 1.22}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1818539861}
@@ -1768,7 +1768,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 96.6, z: -60.9}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1162645455}
@@ -1792,6 +1792,7 @@ MonoBehaviour:
   BackgroundtargetMaterial: {fileID: 2100000, guid: 5585d84f3c9776b4faae41523d6dcc48, type: 2}
   tag: {fileID: 1818539860}
   camera: {fileID: 868337270}
+  light: {fileID: 705507993}
 --- !u!1 &1864591861
 GameObject:
   m_ObjectHideFlags: 0

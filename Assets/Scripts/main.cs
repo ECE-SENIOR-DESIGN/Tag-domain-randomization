@@ -13,6 +13,11 @@ public class main : MonoBehaviour
 
     public GameObject tag;
     public GameObject camera;
+    public GameObject light;
+
+    private float tagX;
+    private float tagY;
+    private float tagZ;
 
 
 
@@ -40,6 +45,8 @@ public class main : MonoBehaviour
             ChangeBackgroundTextureRandomly();
             randomizeTagPosition();
             ChangeQRTextureRandomly();
+            randomizeCameraPosition();
+            randomizeLightPosition();
         }
     }
 
@@ -85,17 +92,63 @@ public class main : MonoBehaviour
 
     void randomizeTagPosition()
     {
-        float newX = Random.Range(0f, 10f);
-        float newY = Random.Range(0f, 10f);
+        float newX = Random.Range(-50f, 50f);
+        float newY = Random.Range(10f, 180f);
         float newZ = Random.Range(-2f, 5f);
 
         float newRoationX = Random.Range(-20f, 20f);
         float newRoationY = Random.Range(-20f, 20f);
         float newRoationZ = Random.Range(-50f, 50f);
 
+        tagX = newX;
+        tagY = newY;
+        tagZ = newZ;
+
         tag.transform.position = new Vector3(newX, newY, newZ);
         tag.transform.rotation = Quaternion.Euler(newRoationX, newRoationY, newRoationZ);
 
+
+    }
+
+    void randomizeCameraPosition()
+    {
+        float newX = tagX + Random.Range(-10f, 10f);
+        float newY = tagY + Random.Range(-10f, 10f);
+        float newZ = -255 + Random.Range(-50f, 200f);
+
+        float newRoationX = Random.Range(0f, 10f);
+        float newRoationY = Random.Range(0f, 10f);
+        float newRoationZ = Random.Range(-2f, 5f);
+
+        camera.transform.position = new Vector3(newX, newY, newZ);
+        camera.transform.rotation = Quaternion.Euler(newRoationX, newRoationY, newRoationZ);
+
+
+    }
+
+    void randomizeLightPosition()
+    {
+        float newX = Random.Range(-300f, 200f);
+        float newY = Random.Range(-300f, 200f);
+        float newZ = Random.Range(20f, 200f);
+
+        float newRoationX = Random.Range(-50f, 50f);
+        float newRoationY = Random.Range(-50f, 50f);
+        float newRoationZ = Random.Range(-50f, 50f);
+
+        float newIntensity = Random.Range(0f, 2f);
+
+        float newColorR = Random.Range(0f, 1f);
+        float newColorG = Random.Range(0f, 1f);
+        float newColorB = Random.Range(0f, 1f);
+        float newAlpha = Random.Range(0f, 1f);
+
+        light.transform.position = new Vector3(newX, newY, newZ);
+        light.transform.rotation = Quaternion.Euler(newRoationX, newRoationY, newRoationZ);
+
+        Light lightComponent = light.GetComponent<Light>();
+        lightComponent.intensity = newIntensity;
+        lightComponent.color = new Color(newColorR, newColorG, newColorB, newAlpha);
 
     }
 }
