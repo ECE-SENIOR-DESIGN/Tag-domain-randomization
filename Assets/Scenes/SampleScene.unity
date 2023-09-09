@@ -1793,6 +1793,8 @@ MonoBehaviour:
   tag: {fileID: 1818539860}
   camera: {fileID: 868337270}
   light: {fileID: 705507993}
+  LT: {fileID: 1140839462}
+  RB: {fileID: 1337947689}
 --- !u!1 &1864591861
 GameObject:
   m_ObjectHideFlags: 0
